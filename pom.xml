@@ -4,7 +4,7 @@
   <parent>
     <groupId>com.github.ngeor</groupId>
     <artifactId>java</artifactId>
-    <version>2.0.0</version>
+    <version>2.1.0</version>
   </parent>
   <artifactId>yak4j-cli</artifactId>
   <version>0.11.0-SNAPSHOT</version>
@@ -29,7 +29,7 @@
     <dependency>
       <groupId>com.github.ngeor</groupId>
       <artifactId>yak4j-dom</artifactId>
-      <version>1.9.0-SNAPSHOT</version>
+      <version>1.9.0</version>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -87,44 +87,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.gmaven</groupId>
-        <artifactId>groovy-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <goals>
-              <goal>execute</goal>
-            </goals>
-            <phase>generate-sources</phase>
-            <configuration>
-              <source>import java.nio.charset.StandardCharsets
-                import java.nio.file.Files
-                import java.nio.file.Path
-
-                def lines = [
-                  '#!/usr/bin/env bash',
-                  '# This script is automatically generated, do not edit manually.',
-                  '# Re-generate the script with mvn package -pl apps/${project.artifactId} -am',
-                  'set -e -o pipefail',
-                  'JAR_NAME=${project.artifactId}-${project.version}.jar',
-                  'SOURCE_JAR=apps/${project.artifactId}/target/$' + '{JAR_NAME}',
-                  'if [[ ! -r $' + '{SOURCE_JAR} ]]; then',
-                  '    mvn package -pl apps/${project.artifactId} -am',
-                  'fi',
-                  '# Use jar from a temp location, to be able to clean the folder of yak4j-cli',
-                  'TEMP_JAR=$' + '{TMP}/$' + '{JAR_NAME}',
-                  '# Delete the temp file upon exit',
-                  'trap "{ rm $' + '{TEMP_JAR}; }" EXIT',
-                  'cp $' + '{SOURCE_JAR} $' + '{TEMP_JAR}',
-                  'java -jar $' + '{TEMP_JAR} $*',
-                  ''
-                ]
-                def contents = lines.join('\n')
-                Files.write(Path.of('scripts', '${project.artifactId}.sh'), contents.getBytes(StandardCharsets.UTF_8))</source>
-            </configuration>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>
