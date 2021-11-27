@@ -11,6 +11,13 @@
   <packaging>jar</packaging>
   <name>yak4j-cli</name>
   <description>Interactive CLI for yak4j</description>
+  <url>https://github.com/ngeor/yak4j-cli</url>
+  <scm>
+    <connection>scm:git:https://github.com/ngeor/yak4j-cli.git</connection>
+    <developerConnection>scm:git:git@github.com:ngeor/yak4j-cli.git</developerConnection>
+    <tag>HEAD</tag>
+    <url>https://github.com/ngeor/yak4j-cli</url>
+  </scm>
   <dependencies>
     <dependency>
       <groupId>org.apache.commons</groupId>
