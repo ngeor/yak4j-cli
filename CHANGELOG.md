@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - Updated com.github.ngeor:yak4j-dom:jar:1.9.0 to version 1.9.1
 - Updating parent from 2.1.0 to 2.4.0
 - Adding cliff.toml
+- Updating parent from 2.4.0 to 3.1.1
 
 ### Yak4j-cli
 
