@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 - Updating parent from 2.1.0 to 2.4.0
 - Adding cliff.toml
 - Updating parent from 2.4.0 to 3.1.1
+- Update picocli to v4.6.3
 
 ### Yak4j-cli
 
