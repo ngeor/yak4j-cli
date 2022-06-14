@@ -5,6 +5,10 @@ import com.github.mustachejava.Mustache;
 import com.github.mustachejava.MustacheFactory;
 import com.github.ngeor.yak4jdom.DocumentWrapper;
 import com.github.ngeor.yak4jdom.ElementWrapper;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Validate;
+import picocli.CommandLine;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -14,9 +18,6 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.Validate;
-import picocli.CommandLine;
 
 /**
  * Creates a new project.

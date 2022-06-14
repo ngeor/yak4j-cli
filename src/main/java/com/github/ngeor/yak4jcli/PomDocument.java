@@ -2,11 +2,12 @@ package com.github.ngeor.yak4jcli;
 
 import com.github.ngeor.yak4jdom.DocumentWrapper;
 import com.github.ngeor.yak4jdom.ElementWrapper;
+import org.apache.commons.lang3.Validate;
+
 import java.io.File;
 import java.util.Collection;
 import java.util.Optional;
 import java.util.stream.Stream;
-import org.apache.commons.lang3.Validate;
 
 /**
  * Wrapper for an XML Document describing a pom file.

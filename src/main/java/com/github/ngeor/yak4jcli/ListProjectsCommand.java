@@ -1,10 +1,11 @@
 package com.github.ngeor.yak4jcli;
 
+import picocli.CommandLine;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import picocli.CommandLine;
 
 /**
  * Lists all projects inside the repo.

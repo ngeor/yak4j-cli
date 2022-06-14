@@ -1,6 +1,8 @@
 package com.github.ngeor.yak4jcli;
 
 import com.github.ngeor.yak4jdom.ElementWrapper;
+import picocli.CommandLine;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +16,6 @@ import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import picocli.CommandLine;
 
 /**
  * Performs the selective release of a subset of libraries.
